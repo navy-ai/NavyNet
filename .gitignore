@@ -1,0 +1,12 @@
+# Default ignored files
+
+test/
+train/
+.ipynb_checkpoints/
+
+**/*.cpython-37.pyc
+*.pt
+*.pth
+*.png
+*.pyc
+
