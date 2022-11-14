@@ -1,0 +1,59 @@
+# System
+gpu_num: 0
+seed: 1024
+debug: False
+verbose: False
+
+# Train / val
+val_size: 0.2
+
+# Data Loader
+input_width: 736
+input_height: 384
+scaler: normalize # normalize_histogram
+num_workers: 4
+shuffle: True
+drop_last: False
+kfold: 5
+
+# Model
+architecture: DeepLabV3Plus
+encoder: timm-regnetx_120 #timm-regnety_016
+encoder_weight: imagenet #imagenet, noisy-student
+depth: 5
+n_classes: 4
+activation: null #argmax
+
+# Trainer
+train_serial:
+n_epochs: 10
+batch_size: 16
+loss: 
+  name: MeanCCELoss # MeanCCELoss
+  args:
+    weight: [1, 1, 1, 3]
+metrics: 
+  - miou
+  - iou1
+  - iou2
+  - iou3
+earlystopping_target: val_miou
+earlystopping_patience: 10
+optimizer:
+  name: AdamW
+  args:
+    lr: 1.0e-04
+    weight_decay: 5.0e-02
+scheduler:
+  name: CosineAnnealingLR
+  args:
+    T_max: 100
+    eta_min: 0
+
+# Logging
+plot:
+  - loss
+  - miou
+  - iou1
+  - iou2
+  - iou3

@@ -1,0 +1,5 @@
+gpu_num: 0
+train_serial: SoTa
+batch_size: 16
+num_workers: 4
+verbose: false

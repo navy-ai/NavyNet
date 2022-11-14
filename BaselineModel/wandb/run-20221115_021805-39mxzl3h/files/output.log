@@ -1,0 +1,29 @@
+START TRAINING
+Epoch 0/10 Train..
+  0%|                                                                                                                                                                          | 0/597 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "train.py", line 157, in <module>
+    trainer.train(dataloader=train_dataloader, epoch_index=epoch_id)
+  File "/workspace/Final_Submission/BaselineModel/modules/trainer.py", line 45, in train
+    for batch_id, (x, y, filename) in enumerate(tqdm(dataloader)):
+  File "/root/anaconda3/envs/maicon/lib/python3.7/site-packages/tqdm/std.py", line 1195, in __iter__
+    for obj in iterable:
+  File "/root/anaconda3/envs/maicon/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 435, in __next__
+    data = self._next_data()
+  File "/root/anaconda3/envs/maicon/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 1085, in _next_data
+    return self._process_data(data)
+  File "/root/anaconda3/envs/maicon/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 1111, in _process_data
+    data.reraise()
+  File "/root/anaconda3/envs/maicon/lib/python3.7/site-packages/torch/_utils.py", line 428, in reraise
+    raise self.exc_type(msg)
+cv2.error: Caught error in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/root/anaconda3/envs/maicon/lib/python3.7/site-packages/torch/utils/data/_utils/worker.py", line 198, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/root/anaconda3/envs/maicon/lib/python3.7/site-packages/torch/utils/data/_utils/fetch.py", line 44, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/root/anaconda3/envs/maicon/lib/python3.7/site-packages/torch/utils/data/_utils/fetch.py", line 44, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/workspace/Final_Submission/BaselineModel/modules/datasets.py", line 47, in __getitem__
+    y = cv2.resize(y, self.input_size, interpolation=cv2.INTER_NEAREST)
+cv2.error: OpenCV(4.6.0) /io/opencv/modules/imgproc/src/resize.cpp:4052: error: (-215:Assertion failed) !ssize.empty() in function 'resize'

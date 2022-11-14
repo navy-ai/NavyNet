@@ -1,0 +1,14 @@
+START TRAINING
+Epoch 0/10 Train..
+
+  0%|▎                                                                                                                                                               | 1/597 [00:26<4:25:58, 26.78s/it]
+Traceback (most recent call last):
+  File "train.py", line 157, in <module>
+    trainer.train(dataloader=train_dataloader, epoch_index=epoch_id)
+  File "/workspace/Final_Submission/BaselineModel/modules/trainer.py", line 59, in train
+    loss.backward()
+  File "/root/anaconda3/envs/maicon/lib/python3.7/site-packages/torch/tensor.py", line 221, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/root/anaconda3/envs/maicon/lib/python3.7/site-packages/torch/autograd/__init__.py", line 132, in backward
+    allow_unreachable=True)  # allow_unreachable flag
+KeyboardInterrupt

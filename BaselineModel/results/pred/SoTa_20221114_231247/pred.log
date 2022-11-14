@@ -1,0 +1,5 @@
+2022-11-14 23:12:47,767 | train | INFO | Load test dataset: 2338
+2022-11-14 23:12:48,615 | train | INFO | Load model architecture: DeepLabV3Plus
+2022-11-14 23:12:53,208 | train | INFO | Load model weight, C:\Users\Navy\maicon\validation\baseline_origin\results\train\SoTa\model.pt
+2022-11-14 23:12:53,212 | train | INFO | START PREDICTION
+2022-11-14 23:14:16,252 | train | INFO | END PREDICTION

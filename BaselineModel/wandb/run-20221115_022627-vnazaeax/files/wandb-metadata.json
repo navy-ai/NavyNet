@@ -1,0 +1,65 @@
+{
+    "os": "Linux-4.4.0-59-generic-x86_64-with-debian-stretch-sid",
+    "python": "3.7.13",
+    "heartbeatAt": "2022-11-14T17:26:28.318495",
+    "startedAt": "2022-11-14T17:26:27.752179",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "train.py",
+    "codePath": "BaselineModel/train.py",
+    "git": {
+        "remote": "https://github.com/xhaktm3/maicon",
+        "commit": "625bb5c99bff9d316e670be9915e594c07fdb9e5"
+    },
+    "email": "=",
+    "root": "/workspace/Final_Submission",
+    "host": "ai-contest-004",
+    "username": "root",
+    "executable": "/root/anaconda3/envs/maicon/bin/python",
+    "cpu_count": 4,
+    "cpu_count_logical": 4,
+    "cpu_freq": {
+        "current": 2200.054,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2200.054,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.054,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.054,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2200.054,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "total": 47.2678108215332,
+        "used": 37.9096565246582
+    },
+    "gpu": "Tesla P40",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "Tesla P40",
+            "memory_total": 25639649280
+        }
+    ],
+    "memory": {
+        "total": 29.45166778564453
+    }
+}

@@ -1,0 +1,51 @@
+
+cuda
+/root/anaconda3/envs/maicon/lib/python3.7/site-packages/albumentations/imgaug/transforms.py:231: FutureWarning: IAASharpen is deprecated. Please use Sharpen instead
+  warnings.warn("IAASharpen is deprecated. Please use Sharpen instead", FutureWarning)
+/root/anaconda3/envs/maicon/lib/python3.7/site-packages/albumentations/imgaug/transforms.py:174: FutureWarning: This augmentation is deprecated. Please use Emboss instead
+  warnings.warn("This augmentation is deprecated. Please use Emboss instead", FutureWarning)
+Loaded 9950 images
+Loaded 1990 images
+Epoch: 1
+
+
+train:   0%|                                     | 2/622 [00:22<1:58:41, 11.49s/it, MultiHeadCELoss - 16.41, fscore - 0.1401, binary_miou - 0.05455, iou0 - 0.07557, iou1 - 0.03352, accuracy - 0.1043]
+Traceback (most recent call last):
+  File "train.py", line 122, in <module>
+    train_logs = train_epoch.run(train_loader)
+  File "/workspace/Final_Submission/BinarySegmentationModel/change_detection_pytorch/utils/train.py", line 177, in run
+    loss, y_pred = self.batch_update(x1, x2, y, batch_i, len_data)
+  File "/workspace/Final_Submission/BinarySegmentationModel/change_detection_pytorch/utils/train.py", line 229, in batch_update
+    prediction = self.model.forward(x1, x2)
+  File "/workspace/Final_Submission/BinarySegmentationModel/change_detection_pytorch/base/model.py", line 42, in forward
+    return self.base_forward(x1, x2)
+  File "/workspace/Final_Submission/BinarySegmentationModel/change_detection_pytorch/base/model.py", line 17, in base_forward
+    features = self.encoder(x1), self.encoder(x2)
+  File "/root/anaconda3/envs/maicon/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/workspace/Final_Submission/BinarySegmentationModel/change_detection_pytorch/encoders/timm_regnet.py", line 30, in forward
+    x = stages[i](x)
+  File "/root/anaconda3/envs/maicon/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/root/anaconda3/envs/maicon/lib/python3.7/site-packages/timm/models/regnet.py", line 229, in forward
+    x = block(x)
+  File "/root/anaconda3/envs/maicon/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/root/anaconda3/envs/maicon/lib/python3.7/site-packages/timm/models/regnet.py", line 167, in forward
+    x = self.conv3(x)
+  File "/root/anaconda3/envs/maicon/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/root/anaconda3/envs/maicon/lib/python3.7/site-packages/timm/models/layers/conv_bn_act.py", line 37, in forward
+    x = self.bn(x)
+  File "/root/anaconda3/envs/maicon/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/root/anaconda3/envs/maicon/lib/python3.7/site-packages/timm/models/layers/norm_act.py", line 64, in forward
+    x = self._forward_python(x)
+  File "/root/anaconda3/envs/maicon/lib/python3.7/site-packages/timm/models/layers/norm_act.py", line 57, in _forward_python
+    return super(BatchNormAct2d, self).forward(x)
+  File "/root/anaconda3/envs/maicon/lib/python3.7/site-packages/torch/nn/modules/batchnorm.py", line 136, in forward
+    self.weight, self.bias, bn_training, exponential_average_factor, self.eps)
+  File "/root/anaconda3/envs/maicon/lib/python3.7/site-packages/torch/nn/functional.py", line 2058, in batch_norm
+    training, momentum, eps, torch.backends.cudnn.enabled
+
+train:   0%|                                     | 2/622 [00:24<2:04:09, 12.02s/it, MultiHeadCELoss - 16.41, fscore - 0.1401, binary_miou - 0.05455, iou0 - 0.07557, iou1 - 0.03352, accuracy - 0.1043]
