@@ -1,5 +1,0 @@
-2022-11-15 02:19:34,227 | train | INFO | Load test dataset: 2338
-2022-11-15 02:19:38,772 | train | INFO | Load model architecture: DeepLabV3Plus
-2022-11-15 02:19:40,177 | train | INFO | Load model weight, /workspace/Final_Submission/BaselineModel/results/train/SoTa/model.pt
-2022-11-15 02:19:40,180 | train | INFO | START PREDICTION
-2022-11-15 02:21:35,478 | train | INFO | END PREDICTION
